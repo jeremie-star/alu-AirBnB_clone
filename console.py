@@ -9,7 +9,6 @@ from models.amenity import Amenity
 from models.city import City
 from models.review import Review
 from models.place import Place
-from models.review import Review
 from models.state import State
 
 
@@ -96,7 +95,7 @@ class HBNBCommand(cmd.Cmd):
             if arg:
                 objects = {
                     k: v for k, v in objects.items() if k.startswith(arg)
-                    }
+                }
             print([str(obj) for obj in objects.values()])
 
     def do_update(self, arg):
@@ -131,4 +130,3 @@ class HBNBCommand(cmd.Cmd):
 
 if __name__ == '__main__':
     HBNBCommand().cmdloop()
-    

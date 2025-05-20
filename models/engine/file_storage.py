@@ -5,7 +5,6 @@ from models.amenity import Amenity
 from models.city import City
 from models.review import Review
 from models.place import Place
-from models.review import Review
 from models.state import State
 import models
 import os
@@ -43,8 +42,6 @@ class FileStorage:
         with open(self.__file_path, 'w') as f:
             json.dump({key: obj.to_dict()
                        for key, obj in FileStorage.__objects.items()}, f)
-        # print(f"File saved to {self.__file_path}")
-        # print(f"File exists: {os.path.exists(self.__file_path)}")
 
     def reload(self):
         """Deserializes the JSON file to __objects
@@ -69,4 +66,3 @@ class FileStorage:
             "Place": Place,
             "City": City,
         }
-    
