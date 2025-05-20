@@ -1,11 +1,8 @@
 #!/usr/bin/python3
-
 """Unit testing for the user class."""
 
 import unittest
-
 from models.user import User
-
 from models.base_model import BaseModel
 
 
@@ -64,5 +61,3 @@ class TestCity(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
-
-    

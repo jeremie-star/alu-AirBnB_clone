@@ -9,7 +9,7 @@ from models.city import City
 
 
 class TestCity(unittest.TestCase):
-    """ Test the CIty Class """
+    """ Test the City Class """
 
     def test_instance(self):
         """ Test instance """
@@ -17,19 +17,19 @@ class TestCity(unittest.TestCase):
         self.assertIsInstance(obj, City)
 
     def test_is_subclass(self):
-        """test the instance of sub classes"""
+        """ Test the instance of sub classes """
         city = City()
         self.assertTrue(issubclass(type(city), BaseModel))
 
     def test_name(self):
-        """test name"""
+        """ Test name """
         city = City()
         self.assertEqual(city.name, "")
         city.name = "Kigali"
         self.assertEqual(city.name, "Kigali")
 
     def test_city_id(self):
-        """test city id"""
+        """ Test city id """
         city = City()
         self.assertEqual(city.state_id, "")
 
